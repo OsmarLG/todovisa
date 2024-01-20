@@ -1,0 +1,542 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110px; /* Ajusta la altura según tus preferencias */
+    background-color: white; /* Cambia el color de fondo según tus preferencias */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Agrega sombra al encabezado si deseas */
+    z-index: 1000;
+}
+
+body {
+    padding-top: 100px; /* Ajusta el valor según la altura de tu encabezado */
+}
+
+.contenedor-encabezado {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    transition: color 0.5s;
+}
+
+nav li {
+    font-weight: bold;
+    transition: color 0.5s;
+}
+
+nav a:hover, li:hover {
+    color: #e23030;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    min-width: 150px;
+}
+
+nav ul li:hover ul {
+    transition: all ease .5s;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    display: block;
+    font-size: small;
+    margin-top: 10px;
+}
+
+.menu-toggle {
+    display: none; 
+    cursor: pointer;
+}
+
+.texto-encabezado {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.texto-encabezado h1 {
+    font-size: 2.5em;
+}
+
+.texto-encabezado p {
+    font-size: 1.2em;
+}
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px; /* Ajusta la distancia desde la parte inferior según tus preferencias */
+    right: 20px; /* Ajusta la distancia desde la derecha según tus preferencias */
+    z-index: 1000; /* Asegura que el botón esté por encima de otros elementos */
+}
+
+.whatsapp-button a {
+    display: block;
+    color: #fff; /* Color de texto */
+    width: 60px; /* Ancho del botón */
+    height: 60px; /* Altura del botón */
+    border-radius: 50%; /* Forma circular */
+    text-align: center;
+    line-height: 60px; /* Centra el contenido verticalmente */
+    text-decoration: none;
+    font-size: 24px; /* Tamaño del icono de WhatsApp */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: background-color 0.5s;
+}
+
+.whatsapp-button a:hover {
+    background-color: #85fa7c; /* Cambia el color al pasar el mouse */
+}
+
+.whatsapp-button img {
+    width: 100%;
+    height: 100%;
+}
+
+.boton {
+    background-color: #e23030;
+    color: #ffffff;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+    transition: background-color 0.5s;
+}
+
+.boton:hover {
+    background-color: #bd1414;
+}
+.boton-service {
+    background-color: #10439a;
+    color: #ffffff;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+    transition: background-color 0.5s;
+}
+
+.boton-service:hover {
+    background-color: #071397;
+}
+
+.boton-seguro {
+    margin-top: 20px;
+    background-color: #e23030;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.5s;
+    font-size: small;
+}
+
+.boton-seguro:hover {
+    background-color: white;
+    border: 1px solid #e23030;
+    padding: 4px;
+}
+.boton-contacto {
+    margin-top: 20px;
+    background-color: #e23030;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.5s;
+    font-size: small;
+}
+
+.boton-contacto:hover {
+    background-color: white;
+    border: 1px solid #e23030;
+    padding: 4px;
+}
+
+.logo {
+    margin-bottom: 0; /* Evita el margen inferior del logo */
+}
+
+.logo img {
+    width: 120px;
+    padding: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.imagen-fondo {
+    background-image: url('../img/vuelo2.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.centered-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+    width: 90%;
+}
+
+.content {
+    flex-basis: 50%;
+    padding-right: 20px;
+}
+
+.image {
+    flex-basis: 50%;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.services-section {
+    width: 90%;
+}
+
+.services {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 0;
+    width: 90%;
+}
+
+.service {
+    align-items: center;
+    padding: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    text-align: center;
+    gap: 10px;
+}
+
+.content-service {
+    flex-basis: 65%;
+}
+
+.content-service h3 {
+    font-size: 1.5em;
+}
+
+.content-service p {
+    font-size: 1em;
+}
+
+.content-service .boton {
+    background-color: #e23030;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+    transition: background-color 0.5s;
+    margin-bottom: 5px;
+}
+
+.content-service .boton:hover {
+    background-color: #e23030;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #f5f5f5;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.footer-logo {
+    width: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+footer h3 {
+    margin-top: 0;
+}
+
+footer ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #000;
+    transition: color 0.5s;
+}
+
+footer ul li a:hover {
+    color: #e23030;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+.footer-submenu {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.footer-submenu li a {
+    text-decoration: none;
+    color: #000;
+    display: block;
+}
+
+.footer-section ul li {
+    position: relative;
+}
+
+.footer-section ul li ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    z-index: 1000;
+}
+
+.footer-section ul li:hover ul {
+    display: block;
+}
+
+.footer-submenu li a {
+    padding: 5px 10px;
+    white-space: nowrap;
+}
+
+footer .derechos {
+    text-align: center;
+    color: white;
+    padding: 8px;
+    background-color: #10439a;
+}
+
+
+@media (max-width: 768px) {
+    .header-logo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+    }
+
+    .contenedor-encabezado {
+        flex-direction: column;
+    }
+
+    .logo img {
+        width: 80px; /* Cambia el tamaño del logo según tus preferencias */
+        padding: 10px; /* Ajusta el espacio alrededor del logo según tus preferencias */
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 10px; /* Ajusta el margen inferior del logo según tus preferencias */
+        align-self: flex-start; /* Para alinear el logo a la izquierda */
+    }
+
+    nav a, ul {
+        font-size: small;
+    }
+
+    .boton-contacto {
+        font-size: smaller;
+    }
+
+    .boton-seguro {
+        font-size: smaller;
+    }
+
+    .whatsapp-button a {
+        width: 40px; /* Ancho del botón */
+        height: 40px; /* Altura del botón */
+        line-height: 40px; /* Centra el contenido verticalmente */
+    }
+
+    nav ul {
+        display: none;
+    }
+    
+    .menu-toggle {
+        display: flex;
+        margin-bottom: 10px;
+        justify-content: flex-end; /* Para alinear el menú a la derecha */
+    }
+
+    .show-menu {
+        background-color: rgb(250, 232, 232);
+    }
+
+    .show-menu ul {
+        display: block; 
+        text-align: center;
+        padding: 10px;
+    }
+    
+    .show-menu ul li ul {
+        display: none;
+        position: relative;
+        background-color: #fff;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        min-width: 150px;
+        top: 100%; 
+        left: 0;
+        font-size: small;
+    }
+    
+    .show-menu ul li:hover ul {
+        display: block;
+        padding: 10px;
+    }
+
+    .logo {
+        margin-bottom: 20px; 
+    }
+
+    nav {
+        width: 100%; 
+    }
+
+    nav ul {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    nav ul li {
+        margin: 10px 0; 
+    }
+
+    .texto-encabezado h1 {
+        font-size: 2em; 
+    }
+
+    .texto-encabezado p {
+        font-size: 1em; 
+    }
+
+    .content h2 {
+        font-size: 1.5em; 
+    }
+
+    .content p {
+        font-size: 1em; 
+    }
+
+    .imagen-fondo {
+        height: 300px; 
+    }
+
+    .about-section {
+        flex-direction: column; 
+        text-align: center; 
+    }
+
+    .content {
+        flex-basis: 100%; 
+        margin: 0; 
+        padding: 0; 
+        text-align: center; 
+    }
+
+    .image {
+        flex-basis: 100%; 
+        margin: 20px 0; 
+        padding: 0; 
+        text-align: center; 
+    }
+
+    .services {
+        flex-direction: column; 
+    }
+
+    .service {
+        flex-basis: 100%; 
+        margin-right: 0; 
+        margin-bottom: 20px; 
+        text-align: center; 
+    }
+
+    .footer-container {
+        flex-direction: column; 
+        text-align: center; 
+    }
+
+    .footer-section {
+        flex: 1;
+        padding: 20px;
+        margin: 0; 
+    }
+
+    .footer-logo {
+        margin-bottom: 20px; 
+    }
+}
+
+.menu-toggle img {
+    width: 30px; 
+    height: 30px;
+    cursor: pointer;
+}
